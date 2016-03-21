@@ -11,6 +11,7 @@ const App = () => (
     <Blaze template="itemsList" items={items} />
   </div>
 );
+```
 
 ## Credits
 
