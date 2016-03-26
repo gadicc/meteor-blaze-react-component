@@ -4,7 +4,7 @@ Use Blaze templates inside of React.
 
 ```jsx
 import React from 'react';
-import Blaze from 'meteor/blaze-react-component';
+import Blaze from 'meteor/gadicc:blaze-react-component';
 
 const App = () => (
   <div>
