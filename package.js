@@ -1,6 +1,6 @@
 Package.describe({
   name: 'gadicc:blaze-react-component',
-  version: '1.0.0',
+  version: '1.1.0',
   summary: '<Blaze template="itemsList" items={items} />',
   git: 'https://github.com/gadicc/meteor-blaze-react-component',
   documentation: 'README.md'
@@ -12,6 +12,7 @@ Package.onUse(function(api) {
   api.use('blaze');
   api.use('reactive-var');
   api.mainModule('blaze-react-component.js', 'client');
+  api.export('blazeToReact', 'client');
 });
 
 Package.onTest(function(api) {

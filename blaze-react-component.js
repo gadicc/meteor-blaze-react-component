@@ -34,4 +34,9 @@ class BlazeComponent extends Component {
 
 }
 
+blazeToReact = function(template) {
+  return (props) => <BlazeComponent {...props} template={template} />;
+}
+
+export { blazeToReact };
 export default BlazeComponent;
