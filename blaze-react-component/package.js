@@ -3,7 +3,7 @@ Package.describe({
   version: '1.1.0',
   summary: '<Blaze template="itemsList" items={items} />',
   git: 'https://github.com/gadicc/meteor-blaze-react-component',
-  documentation: 'README.md'
+  documentation: '../README.md'
 });
 
 Package.onUse(function(api) {
@@ -11,13 +11,10 @@ Package.onUse(function(api) {
   api.use('ecmascript');
   api.use('blaze');
   api.use('reactive-var');
-  api.mainModule('blaze-react-component.js', 'client');
+  api.mainModule('blaze-react-component-client.js', 'client');
+  api.mainModule('blaze-react-component-server.js', 'server');
   api.export('blazeToReact', 'client');
 });
 
-Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('tinytest');
-  api.use('gadicc:blaze-react-component');
-  api.mainModule('blaze-react-component-tests.js');
-});
+// Note: tests are in test-app, since we can't test-packages with
+// peer dependencies.
