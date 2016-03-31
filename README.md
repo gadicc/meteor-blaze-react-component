@@ -1,8 +1,8 @@
 # meteor-blaze-react-component
 
-![circle-ci status](https://circleci.com/gh/:gadicc/:meteor-blaze-react-component.svg?style=shield&circle-token=:circle-token)
+*Use Blaze templates inside of React*.
 
-Use Blaze templates inside of React.
+[![Circle CI](https://circleci.com/gh/gadicc/meteor-blaze-react-component.svg?style=shield)](https://circleci.com/gh/gadicc/meteor-blaze-react-component)
 
 ```jsx
 import React from 'react';
