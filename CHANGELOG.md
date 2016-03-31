@@ -16,7 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - A `blazeToReact()` shortcut for those that want it, see the notes in the
   README. 
 
-## [1.0.0] - 2016-03-21
+## 1.0.0 - 2016-03-21
 
 Initial release.
 
