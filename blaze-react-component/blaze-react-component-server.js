@@ -11,7 +11,7 @@ const BlazeComponent = (props) => {
    )
   };
 
-  return ( <div dangerouslySetInnerHTML={html} /> );
+  return ( <span dangerouslySetInnerHTML={html} /> );
 }
 
 blazeToReact = function(template) {

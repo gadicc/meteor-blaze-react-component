@@ -29,7 +29,7 @@ class BlazeComponent extends Component {
   }
 
   render() {
-    return ( <div ref={(c) => this._blazeRef = c}></div> );
+    return ( <span ref={(c) => this._blazeRef = c} /> );
   }
 
 }

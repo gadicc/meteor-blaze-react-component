@@ -1,8 +1,7 @@
-# meteor-blaze-react-component
+# meteor-blaze-react-component [![Circle CI](https://circleci.com/gh/gadicc/meteor-blaze-react-component.svg?style=shield)](https://circleci.com/gh/gadicc/meteor-blaze-react-component)
 
-*Use Blaze templates inside of React*.
+*Use Blaze templates inside of React*
 
-[![Circle CI](https://circleci.com/gh/gadicc/meteor-blaze-react-component.svg?style=shield)](https://circleci.com/gh/gadicc/meteor-blaze-react-component)
 
 ```jsx
 import React from 'react';
@@ -16,6 +15,9 @@ const App = () => (
 ```
 
 ## Re-exporting
+
+Provided here for those that want it.  Personally I think it's clearer to
+use the `<Blaze />` component directly.
 
 ```jsx
 import React from 'react';
@@ -32,6 +34,12 @@ has none of it's own exports, and just a single template).
 ## Optional and old Meteor support (no ecmascript)
 
 ### Blaze package authors, read this.
+
+You might want your package to provide optional React support.  To be honest,
+I feel it's clearer to rather give instructions to use the `<Blaze />`
+component, as that makes it very clear what's going on.  However, if you
+plan to offer native React support in the future, this is a good way to
+protect your users from future changes:
 
 **package.js**:
 ```js

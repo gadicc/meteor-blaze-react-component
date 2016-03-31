@@ -26,7 +26,7 @@ ecmascript-runtime@0.2.8
 ejson@1.0.9
 es5-shim@4.5.8
 fastclick@1.0.9
-gadicc:blaze-react-component@1.1.0
+gadicc:blaze-react-component@1.1.1
 geojson-utils@1.0.6
 hot-code-push@1.0.2
 html-tools@1.0.7
