@@ -23,3 +23,4 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 gadicc:blaze-react-component
 practicalmeteor:mocha
 
+dispatch:mocha-phantomjs
