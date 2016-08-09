@@ -14,6 +14,9 @@ const { assert, expect } = chai;
 
 /* --- TODO, server side importer --- */
 
+// import './main.html';
+
+/*
 const Template = RealBlaze.Template;
 
 Template["test1"] = new Template("Template.test1", (function() {
@@ -28,9 +31,11 @@ Template["test2"] = new Template("Template.test2", (function() {
     return Spacebars.mustache(view.lookup("text"));
   });
 }));
+*/
 
 /* --- */
 
+if (0) // future planning
 describe('blaze-react-component', () => {
 
   it('renders', () => {
