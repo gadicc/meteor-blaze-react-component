@@ -4,9 +4,9 @@ import { mount } from 'enzyme';
 import sinon, { spy } from 'sinon';
 
 import Blaze from 'meteor/gadicc:blaze-react-component';
+import RealBlaze from 'meteor/blaze';
 
 import { Tracker } from 'meteor/tracker';
-import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
@@ -14,9 +14,20 @@ const { assert, expect } = chai;
 
 describe('blaze-react-component', () => {
 
-  it('mounts and renders', () => {
+  it('mounts and renders a string name', () => {
     const wrapper = mount(<Blaze template="test1" />);
     expect(wrapper.text()).to.equal('OK');
+  });
+
+  it('mounts and renders a passed-in template', () => {
+    const wrapper = mount(<Blaze template={Template.test1} />);
+    expect(wrapper.text()).to.equal('OK');
+  });
+
+  it('throws an error on invalid template= arg', () => {
+    expect(
+      function() { mount(<Blaze template={{invalid: true}} />) }
+    ).to.throw();
   });
 
   it('passes through props', () => {

@@ -1,5 +1,7 @@
 # blaze-react-component [![Circle CI](https://circleci.com/gh/gadicc/meteor-blaze-react-component.svg?style=shield)](https://circleci.com/gh/gadicc/meteor-blaze-react-component)
 
+## Usage
+
 *Use Blaze templates inside of React*
 
 
@@ -13,6 +15,10 @@ const App = () => (
   </div>
 );
 ```
+
+**If you want to use Blaze templates from your *app* (as opposed to a package),
+make sure you have the `templating` package installed (and not, i.e. the
+`static-html` package).**
 
 ## Re-exporting
 

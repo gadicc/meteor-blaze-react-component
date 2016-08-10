@@ -9,8 +9,24 @@ class BlazeComponent extends Component {
   componentDidMount() {
     this._blazeData = new ReactiveVar(_.omit(this.props, 'template'));
 
+    let template, tArg = this.props.template;
+    if (typeof tArg === 'string') {
+      template = Template[tArg];
+      if (!template)
+        throw new Error(`No Template["${tArg}"] exists.  If this template `
+          + "originates in your app, make sure you have the `templating` "
+          + "package installed (and not, for e.g. `static-html`)");
+    } else if (tArg instanceof Blaze.Template) {
+      template = tArg;
+    } else {
+        throw new Error("Invalid template= argument specified.  Expected "
+          + "the string name of an existing Template, or the template "
+          + "itself, instead got ''" + typeof tArg + ": "
+          + JSON.stringify(tArg));
+    }
+
     this._blazeView = Blaze.renderWithData(
-      Template[this.props.template],
+      template,
       () => this._blazeData.get(),
       ReactDOM.findDOMNode(this._blazeRef)
     );
