@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.3.0] - 2016-10-06
+### Added
+* Support a `className` parameter to set the `class` attribute on the `<span>`
+  tag.  Thanks, @Praxie.  (#6)
+
 ## [1.2.0] - 2016-08-10
 ### Added
 * If the template argument is a string name, and it doesn't exist, we

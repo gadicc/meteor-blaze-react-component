@@ -20,6 +20,19 @@ const App = () => (
 make sure you have the `templating` package installed (and not, i.e. the
 `static-html` package).**
 
+Your Blaze template will be rendered into a `<span>` tag.  If needed, you can
+specify a `className` attribute, i.e.
+
+```html
+<Blaze template="myTemplate" className="myClass" />
+```
+
+renders to:
+
+```html
+<span class="myClass">myTemplate content</span>
+```
+
 ## Re-exporting
 
 Provided here for those that want it.  Personally I think it's clearer to
