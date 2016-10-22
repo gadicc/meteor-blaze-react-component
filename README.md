@@ -1,5 +1,11 @@
 # blaze-react-component [![Circle CI](https://circleci.com/gh/gadicc/meteor-blaze-react-component.svg?style=shield)](https://circleci.com/gh/gadicc/meteor-blaze-react-component)
 
+## Installation
+
+```
+meteor add gadicc:blaze-react-component
+```
+
 ## Usage
 
 *Use Blaze templates inside of React*
