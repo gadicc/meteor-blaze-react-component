@@ -7,6 +7,17 @@ import { Template } from 'meteor/templating';
 class BlazeComponent extends Component {
 
   componentDidMount() {
+    this.renderBlazeView();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.template != this.props.template) {
+      Blaze.remove(this._blazeView);
+      this.renderBlazeView();
+    }
+  }
+
+  renderBlazeView() {
     this._blazeData = new ReactiveVar(_.omit(this.props, 'template'));
 
     let template, tArg = this.props.template;
@@ -34,11 +45,6 @@ class BlazeComponent extends Component {
 
   componentWillReceiveProps(nextProps) {
     this._blazeData.set(_.omit(nextProps, 'template'));
-  }
-
-  shouldComponentUpdate() {
-    // Never call render() again; Blaze will do what's necessary.
-    return false;
   }
 
   componentWillUnmount() {
