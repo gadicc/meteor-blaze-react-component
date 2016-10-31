@@ -49,6 +49,8 @@ describe('blaze-react-component', () => {
     wrapper.setProps({ text: 'OK2' });
     Tracker.flush();
     expect(Blaze.prototype.render.calledOnce).to.be.true;
+    // Unwrap the spy
+    Blaze.prototype.restore();
   });
 
   it("re-render when change template", () => {
@@ -57,6 +59,8 @@ describe('blaze-react-component', () => {
     wrapper.setProps({ template: 'test2' });
     Tracker.flush();
     expect(Blaze.prototype.render.calledOnce).to.be.false;
+    // Unwrap the spy
+    Blaze.prototype.restore();
   });
 
 });
