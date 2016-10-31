@@ -43,6 +43,11 @@ class BlazeComponent extends Component {
     );
   }
 
+  shouldComponentUpdate(nextProps) {
+    // Never call render() for props except template again; Blaze will do what's necessary.
+    return nextProps.template !== this.props.template;
+  }
+
   componentWillReceiveProps(nextProps) {
     this._blazeData.set(_.omit(nextProps, 'template'));
   }
