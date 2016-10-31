@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.4.0] - 2016-10-31
+### Added
+* We now support the case where the `template` property is changed.  Previously
+  this had no effect, but now the newly requested template will be rendered in
+  place.  Useful for router actions where the template can vary.  Thanks,
+  @lmachens.  (#8)  
+
 ## [1.3.0] - 2016-10-06
 ### Added
 * Support a `className` parameter to set the `class` attribute on the `<span>`
