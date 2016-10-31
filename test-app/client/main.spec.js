@@ -51,4 +51,12 @@ describe('blaze-react-component', () => {
     expect(Blaze.prototype.render.calledOnce).to.be.true;
   });
 
+  it("re-render when change template", () => {
+    spy(Blaze.prototype, 'render');
+    const wrapper = mount(<Blaze template="test1" text="OK" />);
+    wrapper.setProps({ template: 'test2' });
+    Tracker.flush();
+    expect(Blaze.prototype.render.calledOnce).to.be.false;
+  });
+
 });
