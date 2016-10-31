@@ -6,6 +6,12 @@ Copyright (c) 2016 by Gadi Cohen <dragon@wastelands.net> and released under the
 MIT license (see [LICENSE.txt](./LICENSE.txt)).  Many thanks to all our
 [contributors](https://github.com/gadicc/meteor-blaze-react-component/graphs/contributors).
 
+## Installation
+
+```
+meteor add gadicc:blaze-react-component
+```
+
 ## Usage
 
 ```jsx
