@@ -1,9 +1,12 @@
-# blaze-react-component [![Circle CI](https://circleci.com/gh/gadicc/meteor-blaze-react-component.svg?style=shield)](https://circleci.com/gh/gadicc/meteor-blaze-react-component)
-
-## Usage
+# blaze-react-component [![Circle CI](https://circleci.com/gh/gadicc/meteor-blaze-react-component.svg?style=shield)](https://circleci.com/gh/gadicc/meteor-blaze-react-component) ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 *Use Blaze templates inside of React*
 
+Copyright (c) 2016 by Gadi Cohen <dragon@wastelands.net> and released under the
+MIT license (see [LICENSE.txt](./LICENSE.txt)).  Many thanks to all our
+[contributors](https://github.com/gadicc/meteor-blaze-react-component/graphs/contributors).
+
+## Usage
 
 ```jsx
 import React from 'react';
