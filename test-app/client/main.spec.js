@@ -50,7 +50,7 @@ describe('blaze-react-component', () => {
     Tracker.flush();
     expect(Blaze.prototype.render.calledOnce).to.be.true;
     // Unwrap the spy
-    Blaze.prototype.restore();
+    Blaze.prototype.render.restore();
   });
 
   it("re-render when change template", () => {
@@ -60,7 +60,7 @@ describe('blaze-react-component', () => {
     Tracker.flush();
     expect(Blaze.prototype.render.calledOnce).to.be.false;
     // Unwrap the spy
-    Blaze.prototype.restore();
+    Blaze.prototype.render.restore();
   });
 
 });
