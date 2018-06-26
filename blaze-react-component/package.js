@@ -1,6 +1,6 @@
 Package.describe({
   name: 'gadicc:blaze-react-component',
-  version: '1.4.0',
+  version: '1.4.1',
   summary: '<Blaze template="itemsList" items={items} />',
   git: 'https://github.com/gadicc/meteor-blaze-react-component',
   documentation: '../README.md'
@@ -11,6 +11,7 @@ Package.onUse(function(api) {
   api.use('ecmascript');
   api.use('blaze');
   api.use('templating');
+  api.use('underscore');
 
   api.use('reactive-var', 'client');
   api.mainModule('blaze-react-component-client.js', 'client');
