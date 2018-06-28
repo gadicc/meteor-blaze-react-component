@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.4.1] - 2018-06-28
+### Fixed
+* We now explicitly depend on `underscore`, which since Meteor 1.7, is no longer
+  a default package.  Thanks, @MaxGuitet!  (#16)
+
 ## [1.4.0] - 2016-10-31
 ### Added
 * We now support the case where the `template` property is changed.  Previously
