@@ -4,7 +4,7 @@ import { Blaze } from 'meteor/blaze';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { Template } from 'meteor/templating';
 
-class BlazeComponent extends Component {
+class BlazeReactComponent extends Component {
 
   componentDidMount() {
     this.renderBlazeView();
@@ -63,8 +63,8 @@ class BlazeComponent extends Component {
 }
 
 blazeToReact = function(template) {
-  return (props) => <BlazeComponent {...props} template={template} />;
+  return (props) => <BlazeReactComponent {...props} template={template} />;
 }
 
 export { blazeToReact };
-export default BlazeComponent;
+export default BlazeReactComponent;
