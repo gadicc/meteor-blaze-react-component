@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.4.2] - 2019-02-19
+### Fixed
+* Fixed incompatibility with
+[peerlibrary:blaze-components](http://components.meteorapp.com/)
+by avoiding the name collision on `BlazeComponent`.  Thanks, @duce3!
+(#18, #19)
+
 ## [1.4.1] - 2018-06-28
 ### Fixed
 * We now explicitly depend on `underscore`, which since Meteor 1.7, is no longer
