@@ -18,7 +18,7 @@ Package.onUse(function(api) {
 
   api.mainModule('blaze-react-component-server.js', 'server');
 
-  api.export('BlazeComponent');
+  api.export('BlazeReactComponent');
   api.export('blazeToReact');
 });
 
