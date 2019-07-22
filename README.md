@@ -55,6 +55,17 @@ import './xxx.html';
   const App = () => <Blaze template="xxx" />;
   ```
 
+2. **Uncaught Error: Target container is not a DOM element.**
+
+  Import your "main" template file that contains your react render target (e.g. `<div id="render-target" />`) before any initial render code, i.e.
+
+  ```js
+  // Add this:
+  import './main.html';
+
+  Meteor.startup(...);
+  ```
+
 ## Re-exporting
 
 Provided here for those that want it.  Personally I think it's clearer to
