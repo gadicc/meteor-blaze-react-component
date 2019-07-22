@@ -42,6 +42,19 @@ renders to:
 <span class="myClass">myTemplate content</span>
 ```
 
+## Troubleshooting
+
+1. **Uncaught Error: No Template["xxx"] exists**
+
+  If your template `xxx` exists in a `.html` file inside your `client` directory, Meteor won't automatically import it, and you should `import` it from the same react `.js` file where you need it, e.g.
+
+  ```js
+  // This file contains <template name="xxx">
+import './xxx.html';
+
+  const App = () => <Blaze template="xxx" />;
+  ```
+
 ## Re-exporting
 
 Provided here for those that want it.  Personally I think it's clearer to
