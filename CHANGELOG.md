@@ -4,6 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+* React 17 deprecates `componentWillReceiveProps()`.  Consequently,
+  `blazeData.set()` was moved to `shouldComponentUpdate()` to avoid
+  deprecation warnings in React > 16.3.  Thanks @vjau for letting us
+  know about this (#21).
+
+  For more info, see also:
+  https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html
+
 ## [1.4.2] - 2019-02-19
 ### Fixed
 * Fixed incompatibility with
