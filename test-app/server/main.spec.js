@@ -1,4 +1,4 @@
-import { chai } from 'meteor/practicalmeteor:chai';
+import chai from 'chai';
 import sinon, { spy } from 'sinon';
 import { render } from 'enzyme';
 
