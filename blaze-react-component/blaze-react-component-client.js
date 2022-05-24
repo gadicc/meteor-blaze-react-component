@@ -55,7 +55,6 @@ class BlazeReactComponent extends Component {
   shouldComponentUpdate(nextProps) {
     // this used to be in (the now deprecated) componentWillReceiveProps
     this._blazeData.set(_.omit(nextProps, 'template'));
-
     // Never call render() for props except template again; Blaze will do what's necessary.
     return nextProps.template !== this.props.template;
   }
@@ -65,7 +64,7 @@ class BlazeReactComponent extends Component {
   }
 
   render() {
-    return ( <span className={this.props.className || ''} ref={(c) => this._blazeRef = c} /> );
+    return ( <span style={{display: 'contents'}} className={this.props.className || ''} ref={(c) => this._blazeRef = c} /> );
   }
 
 }
