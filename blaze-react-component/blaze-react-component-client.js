@@ -11,14 +11,23 @@ class BlazeReactComponent extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.template != this.props.template) {
+    if (prevProps.template !== this.props.template) {
       Blaze.remove(this._blazeView);
       this.renderBlazeView();
     }
   }
 
   renderBlazeView() {
-    this._blazeData = new ReactiveVar(_.omit(this.props, 'template'));
+    // allow _template to be passed as template to Blaze
+    let blazeProps;
+    if (this.props._template) {
+      blazeProps =  _.clone(this.props);
+      blazeProps.template = blazeProps._template;
+      delete blazeProps._template;
+    } else {
+      blazeProps = _.omit(this.props, 'template');
+    }
+    this._blazeData = new ReactiveVar(blazeProps);
 
     let template, tArg = this.props.template;
     if (typeof tArg === 'string') {
@@ -46,7 +55,6 @@ class BlazeReactComponent extends Component {
   shouldComponentUpdate(nextProps) {
     // this used to be in (the now deprecated) componentWillReceiveProps
     this._blazeData.set(_.omit(nextProps, 'template'));
-
     // Never call render() for props except template again; Blaze will do what's necessary.
     return nextProps.template !== this.props.template;
   }
@@ -56,7 +64,7 @@ class BlazeReactComponent extends Component {
   }
 
   render() {
-    return ( <span className={this.props.className || ''} ref={(c) => this._blazeRef = c} /> );
+    return ( <span style={{display: 'contents'}} className={this.props.className || ''} ref={(c) => this._blazeRef = c} /> );
   }
 
 }
