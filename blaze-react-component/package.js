@@ -1,6 +1,6 @@
 Package.describe({
   name: 'gadicc:blaze-react-component',
-  version: '1.4.3',
+  version: '1.4.4',
   summary: '<Blaze template="itemsList" items={items} />',
   git: 'https://github.com/gadicc/meteor-blaze-react-component',
   documentation: '../README.md'
