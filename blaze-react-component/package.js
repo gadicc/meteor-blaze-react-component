@@ -7,7 +7,7 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom([ '1.3-rc.0', '1.3-beta.10', '1.3-modules-beta.0', '3.0-beta.0' ]);
+  api.versionsFrom([ '3.0-beta.0' ]);
   api.use('ecmascript');
   api.use('blaze');
   api.use('templating');
