@@ -9,6 +9,7 @@ MIT license (see [LICENSE.txt](./LICENSE.txt)).  Many thanks to all our
 ## Installation
 
 ```
+# v2+ is Meteor v3 only.  Use v1 for Meteor 1 and 2.
 meteor add gadicc:blaze-react-component
 ```
 
