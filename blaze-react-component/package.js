@@ -9,7 +9,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom([ '3.0-beta.0' ]);
   api.use('ecmascript');
-  api.use('blaze@2.8.0');
+  api.use('blaze@2.0.3 || 3.0.0-alpha300.17');
   api.use('templating@1.0.3');
   api.use('underscore');
 
