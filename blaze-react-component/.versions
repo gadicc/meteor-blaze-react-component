@@ -12,7 +12,7 @@ ecmascript-runtime-client@0.12.2-beta300.0
 ecmascript-runtime-server@0.11.1-beta300.0
 ejson@1.1.4-beta300.0
 fetch@0.1.4-beta300.0
-gadicc:blaze-react-component@2.0.0
+gadicc:blaze-react-component@2.0.1
 htmljs@1.2.0
 inter-process-messaging@0.1.2-beta300.0
 meteor@2.0.0-beta300.0
